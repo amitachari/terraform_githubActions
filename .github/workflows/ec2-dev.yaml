@@ -1,0 +1,76 @@
+name: EC2 Dev
+
+on:
+
+  workflow_dispatch:
+
+    inputs:
+
+      terraform_action:
+
+        type: choice
+
+        options:
+          - plan
+          - apply
+          - destroy
+
+      instantiation:
+
+        type: choice
+
+        options:
+          - app
+          - web
+
+
+jobs:
+
+  terraform:
+
+    runs-on: ubuntu-latest
+
+    env:
+
+      TF_TOKEN_app_terraform_io:
+        ${{ secrets.TF_TOKEN_app_terraform_io }}
+
+      TF_WORKSPACE: ec2-dev
+
+    defaults:
+
+      run:
+
+        working-directory:
+          infra-aws/composition-modules/aws_ec2
+
+    steps:
+
+      - uses: actions/checkout@v4
+
+      - uses: hashicorp/setup-terraform@v3
+
+      - run: terraform init
+
+      - run: terraform validate
+
+      - name: Plan
+
+        if: inputs.terraform_action == 'plan'
+
+        run: |
+
+          terraform plan \
+            -var-file="../../../variables/aws_ec2/dev/common.tfvars" \
+            -var-file="../../../variables/aws_ec2/dev/${{ inputs.instantiation }}.tfvars"
+
+            
+      - name: Apply
+
+        if: inputs.terraform_action == 'apply'
+
+        run: |
+
+          terraform apply -auto-approve \
+            -var-file="../../../variables/aws_ec2/dev/common.tfvars" \
+            -var-file="../../../variables/aws_ec2/dev/${{ inputs.instantiation }}.tfvars"
