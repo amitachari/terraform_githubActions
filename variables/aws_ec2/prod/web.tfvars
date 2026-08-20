@@ -1,5 +1,5 @@
 instance_name = "prod-web"
 
-ami = "ami-xxxxx"
+ami = "ami-087d1c9a513324697"
 
-subnet_id = "subnet-dev"
+subnet_id = "subnet-07fea73d9fea499c7"
