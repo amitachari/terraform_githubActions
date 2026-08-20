@@ -7,7 +7,7 @@ terraform {
     organization = "amit-lab"
 
     workspaces {
-      tags = ["ec2-dev"]
+      name = "ec2-dev"
     }
   }
 }
