@@ -15,5 +15,5 @@ variable "subnet_id" {
 }
 
 variable "aws_region" {
-    type = string
+  type = string
 }
