@@ -47,7 +47,7 @@ jobs:
     uses: amitachari/amit-brics-orchestration/.github/workflows/aws_hcp_approval_flow.yml@v1.0.0
 
     secrets:
-      hcp_token: ${{ secrets.HCP_TF_TOKEN }}
+      hcp_token: ${{ secrets.TF_TOKEN_APP_TERRAFORM_IO }}
 
     with:
       environment: dev
