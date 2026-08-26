@@ -44,7 +44,7 @@ permissions:
 
 jobs:
   terraform:
-    uses: amitachari/amit-brics-orchestration/.github/workflows/aws_hcp_approval_flow.yml@v1.0.0
+    uses: amitachari/amit-brics-orchestration/.github/workflows/aws_hcp_approval_flow.yml@main
 
     secrets:
       hcp_token: ${{ secrets.TF_TOKEN_APP_TERRAFORM_IO }}
