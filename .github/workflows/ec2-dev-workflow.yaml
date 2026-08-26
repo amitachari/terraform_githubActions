@@ -54,8 +54,8 @@ jobs:
       instantiation: ${{ inputs.instantiation }}
       terraform_action: ${{ inputs.terraform_action }}
       terraform_log_level: ${{ inputs.terraform_log_level }}
-      terraform_modules_path: infra-aws/composition-modules/aws_ec2
+      terraform_modules_path: infra-aws/composition-modules
       terraform_root_module: aws_ec2
-      terraform_variables_full_path: variables/aws_ec2/dev
+      terraform_variables_full_path: variables/aws_ec2
       tf_cloud_organization: amit-lab
       hcp_workspace: ec2-dev
