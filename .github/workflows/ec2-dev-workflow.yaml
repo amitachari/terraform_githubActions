@@ -1,0 +1,61 @@
+name: aws_ec2_dev
+
+run-name: >-
+  ${{ github.workflow }}
+  ${{ inputs.terraform_action }}
+  ${{ inputs.instantiation }}
+
+on:
+  workflow_dispatch:
+    inputs:
+      terraform_action:
+        description: Terraform Action
+        required: true
+        default: plan
+        type: choice
+        options:
+          - plan
+          - apply
+
+      instantiation:
+        description: Configuration to deploy
+        required: true
+        default: app
+        type: choice
+        options:
+          - app
+          - web
+          - db
+
+      terraform_log_level:
+        description: Terraform log verbosity
+        required: true
+        default: ERROR
+        type: choice
+        options:
+          - ERROR
+          - WARN
+          - INFO
+          - DEBUG
+          - TRACE
+
+permissions:
+  contents: read
+
+jobs:
+  terraform:
+    uses: amitachari/amit-brics-orchestration/.github/workflows/aws_hcp_approval_flow.yml@v1.0.0
+
+    secrets:
+      hcp_token: ${{ secrets.HCP_TF_TOKEN }}
+
+    with:
+      environment: dev
+      instantiation: ${{ inputs.instantiation }}
+      terraform_action: ${{ inputs.terraform_action }}
+      terraform_log_level: ${{ inputs.terraform_log_level }}
+      terraform_modules_path: infra-aws/composition-modules/aws_ec2
+      terraform_root_module: aws_ec2
+      terraform_variables_full_path: variables/aws_ec2/dev
+      tf_cloud_organization: amit-lab
+      hcp_workspace: ec2-dev
