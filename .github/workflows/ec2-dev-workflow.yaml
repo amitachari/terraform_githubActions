@@ -40,6 +40,7 @@ on:
           - TRACE
 
 permissions:
+  id-token: write
   contents: read
 
 jobs:
