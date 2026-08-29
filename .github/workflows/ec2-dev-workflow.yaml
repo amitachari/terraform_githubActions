@@ -16,6 +16,7 @@ on:
         options:
           - plan
           - apply
+          - destroy
 
       instantiation:
         description: Configuration to deploy
