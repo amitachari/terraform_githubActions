@@ -1,9 +1,9 @@
-output "instance_id" {
+output "instance_ids" {
 
-  value = module.ec2_blueprint.instance_id
+  value = module.ec2_blueprint.instance_ids
 }
 
-output "private_ip" {
+output "private_ip_addresses" {
 
-  value = module.ec2_blueprint.private_ip
+  value = module.ec2_blueprint.private_ip_addresses
 }
