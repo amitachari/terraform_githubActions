@@ -4,7 +4,7 @@ module "ec2_blueprint" {
 
   source = "app.terraform.io/amit-lab/ec2/aws"
 
-  version = "2.0.0"
+  version = "2.0.1"
 
   environment = var.environment
 
