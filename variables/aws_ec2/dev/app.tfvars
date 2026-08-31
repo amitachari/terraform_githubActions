@@ -28,7 +28,7 @@ additional_ebs_volumes = [
 
 # Optional existing security groups
 security_group_ids = [
-  "sg-09c793fb8450576fd"
+  "sg-09c793fb8450576fd","sg-0856b0f64bc59dcf5"
 ]
 
 # Custom GPN inbound rules
