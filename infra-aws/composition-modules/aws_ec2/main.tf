@@ -6,10 +6,7 @@ module "ec2_blueprint" {
 
   version = "2.0.1"
 
-  environment = var.environment
-
-
-  instance_name  = var.instance_name
+  environment = var.environment  
   instance_count = var.instance_count
   ami_id         = var.ami_id
   instance_type  = var.instance_type
