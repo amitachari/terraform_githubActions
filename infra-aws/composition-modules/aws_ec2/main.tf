@@ -9,7 +9,7 @@ module "ec2_blueprint" {
   environment = var.environment
 
 
-  instance_name = var.instance_name
+  instance_name  = var.instance_name
   instance_count = var.instance_count
   ami_id         = var.ami_id
   instance_type  = var.instance_type
@@ -19,7 +19,7 @@ module "ec2_blueprint" {
   ebr_enabled   = var.ebr_enabled
   ebr_subnet_id = var.ebr_subnet_id
 
-  root_volume_size      = var.root_volume_size
+  root_volume_size       = var.root_volume_size
   additional_ebs_volumes = var.additional_ebs_volumes
 
   security_group_ids = var.security_group_ids

@@ -1,4 +1,4 @@
-environment  = "dev"
+environment    = "dev"
 instance_count = 2
 ami_id         = "ami-087d1c9a513324697"
 instance_type  = "t3.micro"
@@ -20,15 +20,15 @@ additional_ebs_volumes = [
     device_name = "/dev/sdf"
     volume_size = 10
   },
-#   {
-#     device_name = "/dev/sdg"
-#     volume_size = 200
-#   }
+  #   {
+  #     device_name = "/dev/sdg"
+  #     volume_size = 200
+  #   }
 ]
 
 # Optional existing security groups
 security_group_ids = [
-  "sg-09c793fb8450576fd","sg-0856b0f64bc59dcf5"
+  "sg-09c793fb8450576fd", "sg-0856b0f64bc59dcf5"
 ]
 
 # Custom GPN inbound rules
