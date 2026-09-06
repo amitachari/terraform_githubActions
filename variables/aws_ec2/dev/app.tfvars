@@ -4,15 +4,30 @@ ami_id         = "ami-087d1c9a513324697"
 instance_type  = "t3.micro"
 app_tier       = "app"
 
+# AMI config
+# ami_config = {
+#   name           = "ATT-custom-image-1.*"
+#   owner_accounts = ["******"]
+# }
+
 # GPN network
 subnet_id = "subnet-07fea73d9fea499c7"
 
-# EBR network
-ebr_enabled   = false
+# EBR / NAS network
+network_interfaces = {
+  enable_nas = false
+  enable_ebr = true
+}
+
 ebr_subnet_id = "subnet-0262580ada791f88a"
+nas_subnet_id = null
 
 # Root disk
-root_volume_size = 50
+root_volume = {
+  size = 10
+  type = "gp3"
+}
+
 
 # Additional disks created for every instance
 additional_ebs_volumes = [

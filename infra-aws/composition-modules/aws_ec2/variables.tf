@@ -14,6 +14,14 @@ variable "ami_id" {
   type = string
 }
 
+# ATT Style AMI Config
+# variable "ami_config" {
+#   type = object({
+#     name           = string
+#     owner_accounts = list(string)
+#   })
+# }
+
 variable "instance_type" {
   type = string
 }
@@ -26,8 +34,12 @@ variable "subnet_id" {
   type = string
 }
 
-variable "ebr_enabled" {
-  type = bool
+variable "network_interfaces" {
+
+  type = object({
+    enable_nas = bool
+    enable_ebr = bool
+  })
 }
 
 variable "ebr_subnet_id" {
@@ -35,8 +47,16 @@ variable "ebr_subnet_id" {
   default = null
 }
 
-variable "root_volume_size" {
-  type = number
+variable "nas_subnet_id" {
+  type    = string
+  default = null
+}
+
+variable "root_volume" {
+ type = object({
+   size = number
+   type = string
+ })
 }
 
 variable "additional_ebs_volumes" {
