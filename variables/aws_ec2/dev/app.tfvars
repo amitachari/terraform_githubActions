@@ -11,7 +11,7 @@ app_tier       = "app"
 # }
 
 # GPN network
-subnet_id = "subnet-07fea73d9fea499c7"
+subnet_id = "subnet-03b3fd372cc985885"
 
 # EBR / NAS network
 network_interfaces = {
