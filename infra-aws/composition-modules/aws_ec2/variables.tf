@@ -53,10 +53,10 @@ variable "nas_subnet_id" {
 }
 
 variable "root_volume" {
- type = object({
-   size = number
-   type = string
- })
+  type = object({
+    size = number
+    type = string
+  })
 }
 
 variable "additional_ebs_volumes" {

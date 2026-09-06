@@ -10,19 +10,19 @@ module "ec2_blueprint" {
   instance_count = var.instance_count
   ami_id         = var.ami_id
 
-#ATT Style
-#
-# ami_config = var.ami_config
+  #ATT Style
+  #
+  # ami_config = var.ami_config
 
 
-  instance_type  = var.instance_type
-  app_tier       = var.app_tier
+  instance_type = var.instance_type
+  app_tier      = var.app_tier
 
-  subnet_id     = var.subnet_id
+  subnet_id = var.subnet_id
   # ebr_enabled   = var.ebr_enabled
   network_interfaces = var.network_interfaces
-  ebr_subnet_id = var.ebr_subnet_id
-  nas_subnet_id = var.nas_subnet_id
+  ebr_subnet_id      = var.ebr_subnet_id
+  nas_subnet_id      = var.nas_subnet_id
 
   # root_volume_size       = var.root_volume_size
   root_volume = var.root_volume
