@@ -37,7 +37,7 @@ module "ec2_blueprint" {
   ebr_ingress_rules = var.ebr_ingress_rules
   ebr_egress_rules  = var.ebr_egress_rules
 
-  nas_ingress_rules = var.nas_ingress_rules
+  nas_ingress_rules = var.nas_ingress_rules    # Added NAS in 3.0.0 module
   nas_egress_rules  = var.nas_egress_rules
 
   tags = var.tags
