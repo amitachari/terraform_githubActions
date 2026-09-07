@@ -29,7 +29,7 @@ module "ec2_blueprint" {
 
   additional_ebs_volumes = var.additional_ebs_volumes
 
-  security_group_ids = var.security_group_ids
+  # security_group_ids = var.security_group_ids
 
   gpn_ingress_rules = var.gpn_ingress_rules
   gpn_egress_rules  = var.gpn_egress_rules
