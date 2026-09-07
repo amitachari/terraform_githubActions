@@ -4,7 +4,7 @@ module "ec2_blueprint" {
 
   source = "app.terraform.io/amit-lab/ec2/aws"
 
-  version = "3.0.0"
+  version = "3.0.1"
 
   environment    = var.environment
   instance_count = var.instance_count
@@ -19,7 +19,6 @@ module "ec2_blueprint" {
   app_tier      = var.app_tier
 
   subnet_id = var.subnet_id
-  # ebr_enabled   = var.ebr_enabled
   network_interfaces = var.network_interfaces
   ebr_subnet_id      = var.ebr_subnet_id
   nas_subnet_id      = var.nas_subnet_id
