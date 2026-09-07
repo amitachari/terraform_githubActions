@@ -4,7 +4,7 @@ module "ec2_blueprint" {
 
   source = "app.terraform.io/amit-lab/ec2/aws"
 
-  version = "2.0.2"
+  version = "3.0.0"
 
   environment    = var.environment
   instance_count = var.instance_count
