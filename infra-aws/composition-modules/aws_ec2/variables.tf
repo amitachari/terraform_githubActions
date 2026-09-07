@@ -111,6 +111,28 @@ variable "ebr_egress_rules" {
   }))
 }
 
+variable "nas_ingress_rules" {
+
+  type = list(object({
+    description = string
+    from_port   = number
+    to_port     = number
+    protocol    = string
+    cidr_blocks = list(string)
+  }))
+}
+
+variable "nas_egress_rules" {
+
+  type = list(object({
+    description = string
+    from_port   = number
+    to_port     = number
+    protocol    = string
+    cidr_blocks = list(string)
+  }))
+}
+
 variable "tags" {
   type    = map(string)
   default = {}

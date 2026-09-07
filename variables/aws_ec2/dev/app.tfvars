@@ -41,10 +41,10 @@ additional_ebs_volumes = [
   #   }
 ]
 
-# Optional existing security groups
-security_group_ids = [
-  "sg-09c793fb8450576fd", "sg-0856b0f64bc59dcf5"
-]
+# # Optional existing security groups
+# security_group_ids = [
+#   "sg-09c793fb8450576fd", "sg-0856b0f64bc59dcf5"
+# ]
 
 # Custom GPN inbound rules
 gpn_ingress_rules = [
@@ -53,14 +53,14 @@ gpn_ingress_rules = [
     from_port   = 22
     to_port     = 22
     protocol    = "tcp"
-    cidr_blocks = ["10.10.0.0/16"]
+    cidr_blocks = ["10.30.0.0/16","10.31.0.0/16"]
   },
   {
     description = "Allow application traffic"
     from_port   = 8080
     to_port     = 8080
     protocol    = "tcp"
-    cidr_blocks = ["10.20.0.0/16"]
+    cidr_blocks = ["10.30.0.0/16","10.31.0.0/16"]
   }
 ]
 
@@ -71,7 +71,7 @@ gpn_egress_rules = [
     from_port   = 0
     to_port     = 0
     protocol    = "-1"
-    cidr_blocks = ["0.0.0.0/0"]
+    cidr_blocks = ["10.30.0.0/16","10.31.0.0/16"]
   }
 ]
 
@@ -83,7 +83,7 @@ ebr_ingress_rules = [
     from_port   = 8400
     to_port     = 8403
     protocol    = "tcp"
-    cidr_blocks = ["10.30.0.0/16"]
+    cidr_blocks = ["10.30.0.0/16","10.31.0.0/16"]
   }
 ]
 
@@ -94,10 +94,30 @@ ebr_egress_rules = [
     from_port   = 0
     to_port     = 0
     protocol    = "-1"
-    cidr_blocks = ["10.30.0.0/16"]
+    cidr_blocks = ["10.30.0.0/16","10.31.0.0/16"]
   }
 ]
 
+
+nas_ingress_rules = [
+  {
+    description = "Allow backup traffic"
+    from_port   = 2049
+    to_port     = 2049
+    protocol    = "tcp"
+    cidr_blocks = ["10.30.0.0/16","10.31.0.0/16"]
+  }
+]
+
+nas_egress_rules = [
+  {
+    description = "Allow outbound traffic"
+    from_port   = 0
+    to_port     = 0
+    protocol    = "-1"
+    cidr_blocks = ["10.30.0.0/16","10.31.0.0/16"]
+  }
+]
 tags = {
   Environment = "dev"
   Application = "demo"
