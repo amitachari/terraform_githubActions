@@ -33,7 +33,7 @@ root_volume = {
 additional_ebs_volumes = [
   {
     device_name = "/dev/sdf"
-    volume_size = 20
+    volume_size = 30
   },
   #   {
   #     device_name = "/dev/sdg"
