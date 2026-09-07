@@ -53,14 +53,14 @@ gpn_ingress_rules = [
     from_port   = 22
     to_port     = 22
     protocol    = "tcp"
-    cidr_blocks = ["10.30.0.0/16","10.31.0.0/16"]
+    cidr_blocks = ["10.30.0.0/16", "10.31.0.0/16"]
   },
   {
     description = "Allow application traffic"
     from_port   = 8080
     to_port     = 8080
     protocol    = "tcp"
-    cidr_blocks = ["10.30.0.0/16","10.31.0.0/16"]
+    cidr_blocks = ["10.30.0.0/16", "10.31.0.0/16"]
   }
 ]
 
@@ -71,7 +71,7 @@ gpn_egress_rules = [
     from_port   = 0
     to_port     = 0
     protocol    = "-1"
-    cidr_blocks = ["10.30.0.0/16","10.31.0.0/16"]
+    cidr_blocks = ["10.30.0.0/16", "10.31.0.0/16"]
   }
 ]
 
@@ -83,7 +83,7 @@ ebr_ingress_rules = [
     from_port   = 8400
     to_port     = 8403
     protocol    = "tcp"
-    cidr_blocks = ["10.30.0.0/16","10.31.0.0/16"]
+    cidr_blocks = ["10.30.0.0/16", "10.31.0.0/16"]
   }
 ]
 
@@ -94,7 +94,7 @@ ebr_egress_rules = [
     from_port   = 0
     to_port     = 0
     protocol    = "-1"
-    cidr_blocks = ["10.30.0.0/16","10.31.0.0/16"]
+    cidr_blocks = ["10.30.0.0/16", "10.31.0.0/16"]
   }
 ]
 
@@ -105,7 +105,7 @@ nas_ingress_rules = [
     from_port   = 2049
     to_port     = 2049
     protocol    = "tcp"
-    cidr_blocks = ["10.30.0.0/16","10.31.0.0/16"]
+    cidr_blocks = ["10.30.0.0/16", "10.31.0.0/16"]
   }
 ]
 
@@ -115,7 +115,7 @@ nas_egress_rules = [
     from_port   = 0
     to_port     = 0
     protocol    = "-1"
-    cidr_blocks = ["10.30.0.0/16","10.31.0.0/16"]
+    cidr_blocks = ["10.30.0.0/16", "10.31.0.0/16"]
   }
 ]
 tags = {
