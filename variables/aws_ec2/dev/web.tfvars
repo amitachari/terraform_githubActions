@@ -20,7 +20,7 @@ network_interfaces = {
 }
 
 ebr_subnet_id = "subnet-0262580ada791f88a"
-nas_subnet_id = null
+nas_subnet_id = "subnet-060ee05e12a89a950"
 
 # Root disk
 root_volume = {
