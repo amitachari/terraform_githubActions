@@ -4,7 +4,7 @@ module "ec2_blueprint" {
 
   source = "app.terraform.io/amit-lab/ec2/aws"
 
-  version = "3.0.1"
+  version = "3.0.3"
 
   environment    = var.environment
   instance_count = var.instance_count
@@ -27,8 +27,7 @@ module "ec2_blueprint" {
   root_volume = var.root_volume
 
   additional_ebs_volumes = var.additional_ebs_volumes
-  volume_type = var.volume_type
-
+  
   # security_group_ids = var.security_group_ids
 
   gpn_ingress_rules = var.gpn_ingress_rules
