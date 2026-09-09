@@ -15,7 +15,7 @@ subnet_id = "subnet-03b3fd372cc985885"
 
 # EBR / NAS network
 network_interfaces = {
-  enable_nas = false
+  enable_nas = true
   enable_ebr = true
 }
 
