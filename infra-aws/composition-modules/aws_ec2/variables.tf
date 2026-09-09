@@ -63,6 +63,7 @@ variable "additional_ebs_volumes" {
   type = list(object({
     device_name = string
     volume_size = number
+    type = optional(string)
   }))
 }
 

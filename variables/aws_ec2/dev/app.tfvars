@@ -34,6 +34,7 @@ additional_ebs_volumes = [
   {
     device_name = "/dev/sdf"
     volume_size = 10
+    type = "gp3"
   },
   #   {
   #     device_name = "/dev/sdg"
