@@ -63,12 +63,16 @@ variable "additional_ebs_volumes" {
   type = list(object({
     device_name = string
     volume_size = number
-    type = optional(string)
-    encrypted = optional(bool)
-    delete_on_termination = optional(bool)
-    iops = optional(number)
-    throughput = optional(number)
+    # type = optional(string)
+    # encrypted = optional(bool)
+    # delete_on_termination = optional(bool)
+    # iops = optional(number)
+    # throughput = optional(number)
   }))
+}
+
+variable "EBS_volume_type"{
+ type = string
 }
 
 variable "security_group_ids" {

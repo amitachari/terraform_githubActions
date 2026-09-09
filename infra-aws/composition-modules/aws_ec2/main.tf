@@ -27,6 +27,7 @@ module "ec2_blueprint" {
   root_volume = var.root_volume
 
   additional_ebs_volumes = var.additional_ebs_volumes
+  volume_type = var.volume_type
 
   # security_group_ids = var.security_group_ids
 
