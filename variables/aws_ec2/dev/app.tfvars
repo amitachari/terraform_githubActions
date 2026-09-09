@@ -38,13 +38,13 @@ additional_ebs_volumes = [
     encrypted = true
     throughput = 125
   },
-    {
-      device_name = "/dev/sdg"
-      volume_size = 200
-      type = "gp3"
-      encrypted = true
-      throughput = 10
-    }
+    # {
+    #   device_name = "/dev/sdg"
+    #   volume_size = 200
+    #   type = "gp3"
+    #   encrypted = true
+    #   throughput = 10
+    # }
 ]
 
 # # Optional existing security groups
