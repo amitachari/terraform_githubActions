@@ -1,4 +1,3 @@
-aws_region = "ap-south-1"
 environment    = "dev"
 instance_count = 1
 ami_id         = "ami-087d1c9a513324697"
