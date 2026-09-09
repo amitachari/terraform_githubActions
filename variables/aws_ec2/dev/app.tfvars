@@ -1,5 +1,5 @@
 environment    = "dev"
-instance_count = 2
+instance_count = 1
 ami_id         = "ami-087d1c9a513324697"
 instance_type  = "t3.micro"
 app_tier       = "app"
@@ -15,7 +15,7 @@ subnet_id = "subnet-03b3fd372cc985885"
 
 # EBR / NAS network
 network_interfaces = {
-  enable_nas = true
+  enable_nas = false
   enable_ebr = true
 }
 
