@@ -15,7 +15,7 @@ subnet_id = "subnet-03b3fd372cc985885"
 
 # EBR / NAS network
 network_interfaces = {
-  enable_nas = false
+  enable_nas = true
   enable_ebr = true
 }
 
@@ -33,7 +33,7 @@ root_volume = {
 additional_ebs_volumes = [
   {
     device_name = "/dev/sdf"
-    volume_size = 30
+    volume_size = 10
   },
   #   {
   #     device_name = "/dev/sdg"
