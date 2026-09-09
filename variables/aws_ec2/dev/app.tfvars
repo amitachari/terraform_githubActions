@@ -1,3 +1,4 @@
+aws_region = "ap-south-2"
 environment    = "dev"
 instance_count = 1
 ami_id         = "ami-087d1c9a513324697"
@@ -121,8 +122,8 @@ nas_egress_rules = [
     cidr_blocks = ["10.30.0.0/16", "10.31.0.0/16"]
   }
 ]
-tags = {
-  Environment = "dev"
-  Application = "demo"
-  Owner       = "infra-team"
-}
+# tags = {
+#   Environment = "dev"
+#   Application = "demo"
+#   Owner       = "infra-team"
+# }
