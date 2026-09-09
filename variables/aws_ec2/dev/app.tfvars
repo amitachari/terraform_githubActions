@@ -33,7 +33,7 @@ root_volume = {
 additional_ebs_volumes = [
   {
     device_name = "/dev/sdf"
-    volume_size = 10
+    volume_size = 20
     type = "gp3"
     encrypted = true
     throughput = 125
