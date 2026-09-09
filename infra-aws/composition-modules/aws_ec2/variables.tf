@@ -64,6 +64,10 @@ variable "additional_ebs_volumes" {
     device_name = string
     volume_size = number
     type = optional(string)
+    encrypted = optional(bool)
+    delete_on_termination = optional(bool)
+    iops = optional(number)
+    throughput = optional(number)
   }))
 }
 
